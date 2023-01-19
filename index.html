@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Zoe Music Game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Paperoids</title>
+         <link rel="stylesheet" type="text/css" href="style.css">
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.core.min.js"></script>  
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.js"></script>     
+    <script type="text/paperscript" canvas="canvas">
+
+
+    var KeyData = {
+                a: {
+            color: "purple",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/bubbles.mp3']
+            })
+        },
+        b: {
+            color: "green",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/clay.mp3']
+            })
+        },
+        c: {
+            color: "red",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/corona.mp3']
+            })
+        },
+        d: {
+            color: "Blue ",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/confetti.mp3']
+            })
+        },
+        e: {
+            color: "BlueViolet",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/dotted-spiral.mp3']
+            })
+        },
+        f: {
+            color: "Brown",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-1.mp3']
+            })
+        },
+        g: {
+            color: "BurlyWood",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-2.mp3']
+            })
+        },
+        h: {
+            color: "CadetBlue",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-3.mp3']
+            })
+        },
+        j: {
+            color: "Chartreuse",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/glimmer.mp3']
+            })
+        },
+        k: {
+            color: "purple",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/moon.mp3']
+            })
+        },
+        l: {
+            color: "Chocolate",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/pinwheel.mp3']
+            })
+        },
+        m: {
+            color: "Coral",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-1.mp3']
+            })
+        },
+        n: {
+            color: "CornflowerBlue",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-2.mp3']
+            })
+        },
+        o: {
+            color: "DarkSlateGrey",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-3.mp3']
+            })
+        },
+        s: {
+            color: "DarkTurquoise",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-1.mp3']
+            })
+        },
+        i: {
+            color: "DarkViolet",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-2.mp3']
+            })
+        },
+        p: {
+            color: "DeepPink",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-3.mp3']
+            })
+        },
+        y: {
+            color: "reDeepSkyBlue",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/splits.mp3']
+            })
+        },
+        z: {
+            color: "GreenYellow",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/squiggle.mp3']
+            })
+        },
+        r: {
+            color: "LightGreen",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/suspension.mp3']
+            })
+        },
+        q: {
+            color: "LightSalmon",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/timer.mp3']
+            })
+        },
+        w: {
+            color: "LightSeaGreen",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/ufo.mp3']
+            })
+        },
+        t: {
+            color: "Magenta",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/veil.mp3']
+            })
+        },
+        u: {
+            color: "MediumSlateBlue",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/wipe.mp3']
+            })
+        },
+        x: {
+            color: "MidnightBlue",
+            sound: new Howl({
+                src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/zig-zag.mp3']
+            })
+        },
+    }
+   
+    var Circles = [];
+    function onKeyDown(event) {
+        if(KeyData[event.key]){
+                var maxPoint = new Point(view.size.width , view.size.height);
+                var randomPonit = Point.random();
+                var point = randomPonit * maxPoint;
+                var newCircle = new Path.Circle( point , 500) ;
+                newCircle.fillColor = KeyData[event.key].color; 
+                KeyData[event.key].sound.play(); 
+                Circles.push(newCircle);
+        }
+
+   
+    }
+        
+   function onFrame(event) {
+        for(var x = 0 ; x<Circles.length ; x++){
+           Circles[x].fillColor.hue += 1;
+           Circles[x].scale(0.9);
+        }
+         
+    }
+
+    
+    </script>
+    
+<body>
+    
+   <h1 style="text-align: center;">Press some keys</h1>
+   <canvas id="canvas" resize stats></canvas>
+</body>
+<!-- partial -->
+  
+</body>
+</html>
